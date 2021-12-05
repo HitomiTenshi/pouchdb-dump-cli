@@ -38,7 +38,6 @@ if (!dbName) {
   return process.exit(1);
 }
 
-var Promise = require('lie');
 var PouchDB = require('pouchdb');
 var replicationStream = require('pouchdb-replication-stream');
 var through = require('through2').obj;
@@ -132,7 +131,7 @@ return new Promise(function (resolve, reject) {
   } else {
     dumpOpts.batch_size = 100; // decent default for good performance
   }
-  
+
   var numFiles = 0;
   var numDocsInBatch = 0;
   var out = [];
