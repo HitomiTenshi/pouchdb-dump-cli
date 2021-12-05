@@ -100,7 +100,7 @@ return new Promise(function (resolve, reject) {
 }).then(function () {
   return new PouchDB(dbName, {
     // avoid ETIMEDOUT in Node
-    ajax: {timeout: 60000}
+    ajax: {timeout: 86400000}
   });
 }).then(function (db) {
   var dumpOpts = {};
